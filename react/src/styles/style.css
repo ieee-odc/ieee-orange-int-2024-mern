@@ -1,0 +1,436 @@
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+header.active {
+  background-color: rgba(
+    128,
+    128,
+    128,
+    0.5
+  ); /* New rule for blurry grey background */
+  filter: blur(5px);
+}
+
+* {
+  margin: auto 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: Poppins, sans-serif;
+}
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+  padding-top: 2px;
+}
+
+header .logo {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+#dropdown {
+  display: none;
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: transform 0.5s;
+}
+
+#drop:hover .dropdown {
+  display: block;
+  opacity: 1;
+  transform: translateY(-2px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.nav-bar ul {
+  display: flex;
+}
+
+.nav-bar ul li a {
+  display: block;
+  color: black;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.2s;
+}
+
+.nav-bar ul li a:hover {
+  color: black;
+  background: #eee;
+}
+
+.nav-bar ul li a.active {
+  background-color: #eee;
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
+}
+
+label {
+  display: block;
+}
+
+.login {
+  padding-left: 20px;
+}
+
+.nav-bar ul li a.navlogin {
+  color: #eee;
+  background-color: #11101b;
+  transition: 0.5s;
+}
+
+.nav-bar ul li a.navlogin:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.container {
+  min-height: calc(100vh - 40px * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  height: auto;
+  /* margin-top: 5%; */
+}
+
+.login-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: content;
+  padding-left: 100px;
+  background-color: white;
+}
+
+.issat {
+  height: 75px;
+  width: 111px;
+}
+
+.login-right {
+  display: flex;
+  justify-content: center;
+}
+
+.form-item {
+  position: relative;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.bg-grey {
+  width: 100%;
+  border-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  color: #212022a9;
+}
+
+.login-right img {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.login-header p {
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+.login-form {
+  width: 450px;
+  margin-top: 50px;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.login-footer {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.login-footer a {
+  flex: 6;
+  gap: 15px;
+  background-color: #eee;
+  border-radius: 100px;
+  padding: 0.6rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login-footer a:hover {
+  background-color: black;
+  color: white;
+}
+
+.form-tem label:not(.checkboxLabel) {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 10px;
+  position: absolute;
+  padding: 0 10px;
+  transform: translate(30px, -10px);
+  font-size: 14px;
+}
+
+input[type="cin"] {
+  border: 1px solid black;
+  height: 55px;
+  padding: 0 2rem;
+  width: 100%;
+  outline: none;
+  transition: 0.5s;
+  font-size: 18px;
+  border-radius: 100px;
+}
+
+label[for="cin"],
+label[for="text"] {
+  font-size: 1.1rem;
+  padding-left: 20px;
+  font-weight: 4600;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: black;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  height: 55px;
+  font-size: 18px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+::placeholder {
+  color: grey;
+  font-size: 1rem;
+}
+
+/* Optimisaton for low res devices */
+@media (max-width: 1300px) {
+  header {
+    position: 0 50px;
+  }
+  .login-left {
+    padding: 50px !important;
+  }
+  .login-right {
+    width: 500px;
+  }
+  .login-form {
+    width: 100%;
+  }
+  .login-footer {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    padding: 0 30px;
+  }
+  .login-right {
+    width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login-header h1 {
+    font-size: 25px;
+  }
+  .login-header p {
+    font-size: 16px;
+  }
+  .login-right {
+    width: 400px;
+  }
+  .container.active {
+    filter: blur();
+  }
+  .container.active {
+    filter: blur(15px);
+  }
+  .hamburger {
+    display: block;
+    z-index: 99999;
+  }
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: black;
+    margin: 6px 0;
+    /* z-index: 999; */
+    cursor: pointer;
+  }
+  .nav-bar {
+    background: rgba(255, 255, 255, 0.75);
+    height: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 999;
+    transition: 0.5;
+    overflow: hidden;
+  }
+  .nav-bar.active {
+    height: 800px;
+  }
+  .nav-bar ul {
+    display: block;
+    width: fit-content;
+    margin: 160px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+  }
+  .nav-bar.active ul {
+    opacity: 1;
+    transition: 0.5;
+  }
+  .nav-bar ul li a {
+    display: block;
+    color: black;
+    margin-top: 40px;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-header h1 {
+    font-size: 30px;
+  }
+  body {
+    padding: 20px;
+  }
+  .container {
+    grid-template-columns: auto;
+  }
+  .login-right {
+    display: none;
+  }
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ffffff;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #ffffff;
+}
+#can::placeholder1 {
+  color: red;
+}
+
