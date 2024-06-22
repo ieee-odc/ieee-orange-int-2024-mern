@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com);
+@import url(https://fonts.gstatic.com);
+@import url(https://fonts.googleapis.com/css2?family=Poppins&display=swap);
+
+.container {
+  margin: auto 0;
+  min-height: calc(100vh - 40px * 2);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 10px;
+  overflow: hidden;
+  height: auto;
+}
+
+.header {
+  justify-content: center;
+  width: 100%;
+  padding: 0 100px;
+  padding-top: 2px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header p {
+  opacity: 0.7;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: content;
+  padding-left: 100px;
+  background-color: white;
+  margin-top: 5%;
+}
+
+.option {
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  padding: 1rem;
+  height: 55px;
+  font-size: 18px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: black;
+  color: white;
+}
+
+.option {
+  margin-bottom: 20px;
+}
