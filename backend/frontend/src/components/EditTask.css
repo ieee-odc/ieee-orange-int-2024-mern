@@ -1,0 +1,26 @@
+.edit-task input {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .edit-task button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .edit-task button:hover {
+    background-color: #0056b3;
+  }
+  
