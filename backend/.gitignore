@@ -1,0 +1,13 @@
+#.gitignore
+node_modules/
+routes/
+modules/
+
+
+#file server
+server.js
+.env
+package-lock.json
+package.json
+workout.js
+workouts.js
